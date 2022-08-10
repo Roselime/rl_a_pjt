@@ -1,0 +1,17 @@
+.edit-list {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.edit-button {
+  width: 100%;
+  margin-top: 5px;
+}
+.cal-button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+label {
+  font-weight: bold;
+}
