@@ -30,9 +30,10 @@ def write():
 
 @page.route('/detail')
 def detail():
-
+    _title = request.args.get('title')
+    print(_title)
     details = mongo.db['dangdang'].find_one (
-        {"title": request.args.get('title')}
+        {"title": _title}
     ) 
 
     return jsonify(
@@ -48,4 +49,4 @@ def list():
 
    
 if __name__ == '__main__':
-    page.run()
+    page.run(host='0.0.0.0', port='80')

@@ -2,11 +2,14 @@ $(document).ready(function () {
   $(".list-group-item").click(function () {
     const keyname = $(this).attr("id");
 
-    const url = "http://127.0.0.1:5000/detail?title=" + keyname;
+    const url = "/detail?title=" + keyname;
+    console.log(url);
 
     $.get(url).then(function (data) {
+      console.log(data);
       $("#detailModalLabel").text(data.title);
       $("#detailModalContent").text(data.content);
+      console.log("clickpost");
       $("#detailModal").modal("show");
     });
   });
